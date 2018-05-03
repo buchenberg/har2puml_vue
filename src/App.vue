@@ -10,9 +10,9 @@
       <!-- Navigation. We hide it in small screens. -->
       <nav class="mdl-navigation mdl-layout--large-screen-only">
         <!-- Accent-colored raised button -->
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+        <!-- <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
         Upload JSON
-        </button>
+        </button> -->
       </nav>
     </div>
   </header>
@@ -30,7 +30,7 @@ export default {
   name: 'App',
   data () {
     return {
-      title: 'JSON to UML'
+      title: 'HAR to PUML'
     }
   }
 }
