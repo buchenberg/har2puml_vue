@@ -21,10 +21,6 @@ export default {
       return _url.pathname
     }
   },
-  components: {
-  },
-  mounted: function () {
-  },
   data () {
     return {
       title: 'HAR Viewer'

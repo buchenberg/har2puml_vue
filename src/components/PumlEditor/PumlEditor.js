@@ -8,25 +8,21 @@ export default {
   data () {
     return {
       title: 'Puml Editor',
-      har: this.$store.state.har,
-      puml: ''
-    }
-  },
-  created () {
-    if (this.har) {
-      pumlfy(this.har,
-        (puml) => {
-          this.puml = puml
-        })
+      har: this.$store.state.har
     }
   },
   mounted: function () {
-    const editor = ace.edit('puml-editor')
-    let session = editor.getSession()
-    editor.setOptions({
-      mode: 'ace/mode/text',
-      theme: 'ace/theme/monokai'
-    })
-    session.setValue(this.puml)
+    if (this.har) {
+      const editor = ace.edit('puml-editor')
+      let session = editor.getSession()
+      editor.setOptions({
+        mode: 'ace/mode/text',
+        theme: 'ace/theme/monokai'
+      })
+      pumlfy(this.har,
+        (puml) => {
+          session.setValue(puml)
+        })
+    }
   }
 }
