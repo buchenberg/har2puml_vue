@@ -2,7 +2,7 @@
   "name": "vue_ace",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "homepage": "https://buchenberg.github.io/vue_ace/",
+  "homepage": "https://buchenberg.github.io/har2puml_vue/",
   "author": "Gregory Buchenberger <buchenberger@gmail.com>",
   "private": true,
   "scripts": {
@@ -42,7 +42,7 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.2.0",
     "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-standard": "^3.0.1",
+    "eslint-pludgin-standard": "^3.0.1",
     "eslint-plugin-vue": "^4.5.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.4",

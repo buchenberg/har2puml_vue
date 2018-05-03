@@ -50,7 +50,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: 'https://buchenberg.github.io/vue_ace/',
+    assetsPublicPath: 'https://buchenberg.github.io/har2puml_vue/',
 
     /**
      * Source Maps
