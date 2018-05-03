@@ -8,7 +8,7 @@ export default {
   name: 'PumlEditor',
   data () {
     return {
-      title: 'Puml Editor',
+      title: 'Plant UML',
       puml: null,
       encoded: null,
       puml_url: null
@@ -21,18 +21,18 @@ export default {
   },
   methods: {
     renderPuml: function () {
-      const editor = ace.edit('puml-editor')
-      let session = editor.getSession()
-      editor.setOptions({
-        mode: 'ace/mode/text',
-        theme: 'ace/theme/monokai'
-      })
-      editor.$blockScrolling = Infinity
+      // const editor = ace.edit('puml-editor')
+      // let session = editor.getSession()
+      // editor.setOptions({
+      //   mode: 'ace/mode/text',
+      //   theme: 'ace/theme/monokai'
+      // })
+      // editor.$blockScrolling = Infinity
       pumlfy(this.har,
         (puml) => {
           this.puml_url = `https://www.plantuml.com/plantuml/svg/${plantumlEncoder.encode(puml)}`
           this.puml = puml
-          session.setValue(puml)
+          // session.setValue(puml)
         })
     }
   },

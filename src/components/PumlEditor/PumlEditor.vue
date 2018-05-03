@@ -1,13 +1,13 @@
 <template>
   <div v-if="har">
-    <div class="mdl-grid" v-if="har">
+    <div class="mdl-grid" v-if="puml">
       <div class="mdl-cell mdl-cell--12-col">
         <div class="demo-card-wide mdl-card mdl-shadow--2dp">
           <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">{{ title }}</h2>
+            <h2 class="ace-card-text mdl-card__title-text">PUML</h2>
           </div>
-          <div class="ace-card-text mdl-card__supporting-text">
-            <div id="puml-editor"/>
+          <div class="mdl-card__supporting-text">
+            <pre>{{puml}}</pre>
           </div>
         </div>
       </div>

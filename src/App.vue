@@ -30,7 +30,7 @@ export default {
   name: 'App',
   data () {
     return {
-      title: 'HAR to PUML'
+      title: 'HAR to UML'
     }
   }
 }
