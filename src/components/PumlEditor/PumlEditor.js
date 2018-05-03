@@ -8,11 +8,16 @@ export default {
   data () {
     return {
       title: 'Puml Editor',
-      har: this.$store.state.har
+      puml: ''
     }
   },
-  mounted: function () {
-    if (this.har) {
+  computed: {
+    har () {
+      return this.$store.state.har
+    }
+  },
+  methods: {
+    renderPuml: function () {
       const editor = ace.edit('puml-editor')
       let session = editor.getSession()
       editor.setOptions({
@@ -21,8 +26,19 @@ export default {
       })
       pumlfy(this.har,
         (puml) => {
+          this.puml = puml
           session.setValue(puml)
         })
+    }
+  },
+  mounted: function () {
+    if (this.har) {
+      this.renderPuml()
+    }
+  },
+  updated: function () {
+    if (this.har) {
+      this.renderPuml()
     }
   }
 }

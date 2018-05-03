@@ -18,14 +18,6 @@ const store = new Vuex.Store({
           'har'
         ]
       }
-    ),
-    createPersistedState(
-      {
-        'key': 'puml_cache',
-        'paths': [
-          'puml'
-        ]
-      }
     )],
   state: {
     har: '',
@@ -34,9 +26,6 @@ const store = new Vuex.Store({
   mutations: {
     updateHarContent (state, data) {
       state.har = data
-    },
-    updatePumlContent (state, data) {
-      state.puml = data
     }
   }
 })
