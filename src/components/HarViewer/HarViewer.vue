@@ -1,17 +1,17 @@
 <template>
-  <div class="mdl-grid">
+  <div class="mdl-grid" v-if="har">
       <div class="mdl-cell mdl-cell--12-col">
         <h3>
-          {{ msg }}
+          {{ title }}
         </h3>
-        <div v-if="har">
         <h4>
-          Har version {{ har.log.version || 'nope' }}
+          Log version {{ har.log.version || 'nope' }}
         </h4>
+        <h5>Entries</h5>
           <ul class="demo-list-item mdl-list">
           <li class="mdl-list__item" v-for="(entry, index) in har.log.entries" :key="index">
             <span class="mdl-list__item-primary-content">
-              {{index}} - {{ entry.request.method }} - {{ entry.request.url }}
+             {{index}} {{ entry.request.method }} - {{ path(entry.request.url) }}
             </span>
             <span class="mdl-list__item-secondary-action">
               <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="list-checkbox-1">
@@ -20,11 +20,10 @@
             </span>
           </li>
         </ul>
-        </div>
       </div>
   </div>
 </template>
 
-<script src='./PUMLViewer.js' />
+<script src='./HarViewer.js' />
 
-<style scoped src='./PUMLViewer.css' />
+<style scoped src='./HarViewer.css' />

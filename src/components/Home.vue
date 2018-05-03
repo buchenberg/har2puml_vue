@@ -1,19 +1,22 @@
 <template>
   <div>
-      <JSONEditor/>
-      <PUMLViewer/>
+      <HarEditor/>
+      <HarViewer/>
+      <PumlEditor/>
   </div>
 </template>
 
 <script>
-import JSONEditor from '@/components/JSONEditor/JSONEditor.vue'
-import PUMLViewer from '@/components/PUMLViewer/PUMLViewer.vue'
+import HarEditor from '@/components/HarEditor/HarEditor.vue'
+import HarViewer from '@/components/HarViewer/HarViewer.vue'
+import PumlEditor from '@/components/PumlEditor/PumlEditor.vue'
 
 export default {
   name: 'Home',
   components: {
-    JSONEditor,
-    PUMLViewer
+    HarEditor,
+    HarViewer,
+    PumlEditor
   },
   mounted: function () {
   },

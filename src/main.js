@@ -10,20 +10,33 @@ Vue.config.productionTip = false
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
-  plugins: [createPersistedState(
-    {
-      'key': 'ace_cache',
-      'paths': [
-        'ace_content'
-      ]
-    }
-  )],
+  plugins: [
+    createPersistedState(
+      {
+        'key': 'har_cache',
+        'paths': [
+          'har'
+        ]
+      }
+    ),
+    createPersistedState(
+      {
+        'key': 'puml_cache',
+        'paths': [
+          'puml'
+        ]
+      }
+    )],
   state: {
-    ace_content: ''
+    har: '',
+    puml: ''
   },
   mutations: {
-    updateAceContent (state, data) {
-      state.ace_content = data
+    updateHarContent (state, data) {
+      state.har = data
+    },
+    updatePumlContent (state, data) {
+      state.puml = data
     }
   }
 })

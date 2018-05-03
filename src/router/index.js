@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import JSONEditor from '@/components/JSONEditor/JSONEditor.vue'
+// import HarEditor from '@/components/HarEditor/HarEditor.vue'
 import Home from '@/components/Home.vue'
 
 Vue.use(Router)
