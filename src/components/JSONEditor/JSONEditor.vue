@@ -1,7 +1,7 @@
 <template>
   <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--6-col">
-      <h2>Aces!</h2>
+    <div class="mdl-cell mdl-cell--12-col">
+      <h3>Ace Editor</h3>
       <brace
         :fontsize="'22px'"
         :theme="'monokai'"
@@ -12,7 +12,6 @@
         :highlightline="true">
       </brace>
       </div>
-      <div class="mdl-cell mdl-cell--6-col">{{ content }}</div>
   </div>
 </template>
 

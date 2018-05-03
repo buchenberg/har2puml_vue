@@ -16,19 +16,10 @@
       </nav>
     </div>
   </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">{{this.title}}</span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-    </nav>
-  </div>
   <main class="mdl-layout__content">
     <div class="page-content">
       <router-view />
-      </div>
+    </div>
   </main>
 </div>
 </template>
@@ -48,4 +39,10 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('https://code.getmdl.io/1.2.1/material.blue-red.min.css');
+.mdl-layout .mdl-layout__drawer-button {
+  display: none;
+}
+.mdl-layout__header-row {
+  padding-left: 8px
+}
 </style>

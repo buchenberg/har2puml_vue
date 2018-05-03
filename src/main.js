@@ -10,9 +10,16 @@ Vue.config.productionTip = false
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
-  plugins: [createPersistedState()],
+  plugins: [createPersistedState(
+    {
+      'key': 'ace_cache',
+      'paths': [
+        'ace_content'
+      ]
+    }
+  )],
   state: {
-    ace_content: 'foobar'
+    ace_content: ''
   },
   mutations: {
     updateAceContent (state, data) {
