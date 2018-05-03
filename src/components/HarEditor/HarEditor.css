@@ -3,10 +3,20 @@ h2 {
 }
 
 #har-editor { 
+    width: 100%;
     border-radius: 5px;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     height: 500px;
+}
+
+.demo-card-wide.mdl-card {
+  width: 100%;
+}
+
+.ace-card-text.mdl-card__supporting-text {
+  box-sizing: border-box;
+  width: 100%;
 }

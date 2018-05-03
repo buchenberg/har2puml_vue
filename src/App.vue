@@ -35,10 +35,11 @@ export default {
   }
 }
 </script>
-
 <style>
+@import "../node_modules/material-design-lite/dist/material.min.css";
+
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-@import url('https://code.getmdl.io/1.2.1/material.blue-red.min.css');
+
 .mdl-layout .mdl-layout__drawer-button {
   display: none;
 }

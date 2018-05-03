@@ -2,6 +2,10 @@ h2 {
   font-weight: normal;
 }
 
+.demo-card-wide.mdl-card {
+  width: 100%;
+}
+
 #puml-editor { 
     border-radius: 5px;
     top: 0;
@@ -9,4 +13,9 @@ h2 {
     bottom: 0;
     left: 0;
     height: 500px;
+}
+
+.ace-card-text.mdl-card__supporting-text {
+  box-sizing: border-box;
+  width: 100%;
 }

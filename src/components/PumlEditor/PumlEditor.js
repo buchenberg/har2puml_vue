@@ -1,6 +1,7 @@
 import * as ace from 'brace'
 import 'brace/mode/javascript'
 import 'brace/theme/monokai'
+import plantumlEncoder from 'plantuml-encoder'
 import pumlfy from '../../utils/pumlfier'
 
 export default {
@@ -8,7 +9,9 @@ export default {
   data () {
     return {
       title: 'Puml Editor',
-      puml: ''
+      puml: null,
+      encoded: null,
+      puml_url: null
     }
   },
   computed: {
@@ -24,8 +27,10 @@ export default {
         mode: 'ace/mode/text',
         theme: 'ace/theme/monokai'
       })
+      editor.$blockScrolling = Infinity
       pumlfy(this.har,
         (puml) => {
+          this.puml_url = `https://www.plantuml.com/plantuml/svg/${plantumlEncoder.encode(puml)}`
           this.puml = puml
           session.setValue(puml)
         })

@@ -15,6 +15,7 @@ export default {
       mode: 'ace/mode/javascript',
       theme: 'ace/theme/monokai'
     })
+    editor.$blockScrolling = Infinity
     let store = this.$store
     let session = editor.getSession()
     session.setValue(this.content)
