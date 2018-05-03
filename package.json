@@ -2,6 +2,7 @@
   "name": "vue_ace",
   "version": "1.0.0",
   "description": "A Vue.js project",
+  "homepage": "https://buchenberg.github.io/vue_ace/",
   "author": "Gregory Buchenberger <buchenberger@gmail.com>",
   "private": true,
   "scripts": {
