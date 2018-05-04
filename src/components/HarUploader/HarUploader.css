@@ -18,6 +18,10 @@
     cursor: pointer;
   }
 
+  label.input-custom-file input[type=file] {
+    display: none;
+  }
+
   .input-file {
     opacity: 0; /* invisible but it's there! */
     width: 100%;
@@ -35,4 +39,6 @@
     text-align: center;
     padding: 50px 0;
   }
+
+  
   

@@ -1,6 +1,6 @@
-import * as ace from 'brace'
-import 'brace/mode/javascript'
-import 'brace/theme/monokai'
+// import * as ace from 'brace'
+// import 'brace/mode/javascript'
+// import 'brace/theme/monokai'
 import plantumlEncoder from 'plantuml-encoder'
 import pumlfy from '../../utils/pumlfier'
 
